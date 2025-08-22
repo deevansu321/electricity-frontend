@@ -1,0 +1,146 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #85aaef, #2b78e3);
+  padding: 20px; /* ✅ prevents content from touching edges */
+  box-sizing: border-box;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+}
+
+.auth-form input,
+.auth-form select {
+  width: 100%; /* ✅ unified width */
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #007bff;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-primary12 {
+  width: 100%; /* ✅ consistent full width */
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary12 {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary12:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .auth-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .auth-form input,
+  .auth-form select {
+    font-size: 14px;
+    padding: 10px 10px 10px 38px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-primary12 {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;        /* ✅ make buttons full width */
+    box-sizing: border-box;
+    margin-top: 10px;   /* ✅ spacing between stacked buttons */
+  }
+}
+
+
+.auth-form select {
+  width: 100%;         /* keep select same width as input */
+  max-width: 50%;     /* ✅ prevent overflow */
+  overflow-x: hidden;  /* ✅ stop horizontal scroll */
+  text-overflow: ellipsis;
+  -webkit-appearance: none; /* ✅ removes default browser styling */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media (max-width: 480px) {
+  .auth-form select {
+    font-size: 14px;
+    padding: 10px 10px 10px 38px;
+    max-width: 50%;  /* ✅ force it inside container */
+  }
+}
