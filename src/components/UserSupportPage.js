@@ -66,8 +66,8 @@ const UserSupportPage = () => {
 
       <div className="contact-info-box">
         <div className="contact-item"><FaPhoneAlt /> <strong>Phone:</strong> +91 98765 43210</div>
-        <div className="contact-item"><FaEnvelope /> <strong>Email:</strong> support@megacart.com</div>
-        <div className="contact-item"><FaMapMarkerAlt /> <strong>Address:</strong> 123 MegaCart St, Tech City, India</div>
+        <div className="contact-item"><FaEnvelope /> <strong>Email:</strong> tilakraj@gmail.com</div>
+        <div className="contact-item"><FaMapMarkerAlt /> <strong>Address:</strong> CRPF campus Ranchi, India</div>
       </div>
 
       <h3 className="conversation-heading">🗨️ Your Conversation</h3>

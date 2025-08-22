@@ -27,7 +27,7 @@ const AdminSupportPage = () => {
 
   useEffect(() => {
     if (selectedUserId) {
-      axios.get(`http://localhost:5000/api/support/${selectedUserId}`)
+      axios.get(`${API_BASE_URL}/api/support/${selectedUserId}`)
         .then(res => {
           if (res.data.success) {
             setMessages(res.data.messages);
@@ -47,10 +47,10 @@ const AdminSupportPage = () => {
       message: reply
     };
     try {
-      await axios.post('http://localhost:5000/api/support', payload);
+      await axios.post(`${API_BASE_URL}/api/support`, payload);
       setReply('');
       setStatus('✅ Reply sent');
-      const res = await axios.get(`http://localhost:5000/api/support/${selectedUserId}`);
+      const res = await axios.get(`${API_BASE_URL}/api/support/${selectedUserId}`);
       setMessages(res.data.messages);
     } catch {
       setStatus('❌ Failed to send reply');
